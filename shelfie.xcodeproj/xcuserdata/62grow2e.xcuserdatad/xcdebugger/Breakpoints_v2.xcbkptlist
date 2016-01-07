@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sources/detector.cpp"
+            timestampString = "473873465.657112"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "Detector::Detector()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Detector::Detector()"
+                  moduleName = "shelfieDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/62grow2e/Documents/xcode/ofApps/shelfie/sources/detector.cpp"
+                  timestampString = "473873468.607448"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "503">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Detector::Detector()"
+                  moduleName = "shelfieDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/62grow2e/Documents/xcode/ofApps/shelfie/sources/detector.cpp"
+                  timestampString = "473873468.607891"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "523">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Detector::Detector()"
+                  moduleName = "shelfieDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/62grow2e/Documents/xcode/ofApps/shelfie/sources/detector.cpp"
+                  timestampString = "473873468.608268"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "563">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Detector::Detector()"
+                  moduleName = "shelfieDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/62grow2e/Documents/xcode/ofApps/shelfie/sources/detector.cpp"
+                  timestampString = "473873468.608592"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "1247">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Detector::Detector()"
+                  moduleName = "shelfieDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/62grow2e/Documents/xcode/ofApps/shelfie/sources/detector.cpp"
+                  timestampString = "473873468.608916"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
