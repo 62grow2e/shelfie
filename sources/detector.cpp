@@ -15,20 +15,26 @@ Detector::Detector() : running_(false) {
       itr != boost::filesystem::end(directory_iterator); itr++) {
     ofImage sample;
     auto filename = itr->path().filename().string();
-    if (sample.load("sample_icons/" + filename)) {
+    if (sample.load("img/sample_icons/" + filename)) {
       samples_.emplace_back(sample);
     }
   }
-  
 }
 
 Detector::~Detector() {
+  cout << "Thread finished." <<  endl;
+}
 
+void Detector::start(ofImage& input) {
+  setInput(input);
+  startThread();
 }
 
 void Detector::threadedFunction() {
   while (isThreadRunning()) {
-    cout << "thread running" << endl;
+    if (lock()) {
+      unlock();
+    }
   }
 }
 
@@ -40,15 +46,6 @@ void Detector::setInput(ofImage& input) {
 }
 
 #pragma mark Status
-bool Detector::running() {
-  return running_;
-}
-
-#pragma mark Routine
-void Detector::run() {
-  running_ = true;
-  lock();
-  
-  unlock();
-  running_ = false;
+bool Detector::detecting() {
+  return detecting_;
 }

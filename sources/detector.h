@@ -6,11 +6,11 @@
 //
 //
 
-#ifndef detector_h
-#define detector_h
+#pragma once
 
-#include <stdio.h>
-#include "ofMain.h"
+
+//#include "ofMain.h"
+#include "ofThread.h"
 #include "ofxOpenCv.h"
 
 class Detector : public ofThread {
@@ -28,18 +28,19 @@ class Detector : public ofThread {
 
   // Status
   bool running();
+  bool detecting();
 
   // Routine
+  void start(ofImage& input);
   void threadedFunction();
-  void run();
+
 
  private:
   // Properties
   bool running_;
+  bool detecting_;
 
   // Data members
   ofImage input_;
   vector<ofImage> samples_;
 };
-
-#endif /* detector_h */

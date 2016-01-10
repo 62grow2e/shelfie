@@ -2,9 +2,8 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-  ofSetVerticalSync(false);
+//  ofSetVerticalSync(false);
   capture_layer_ = make_unique<CaptureLayer>();
-  detector.startThread();
 }
 
 //--------------------------------------------------------------
@@ -27,6 +26,7 @@ void ofApp::keyPressed(int key){
   switch (key) {
     case 'c':
       auto& cropped_frame = capture_layer_->getCroppedFrame();
+      detector.start(cropped_frame);
       cout << "crop" << endl;
       break;
   }

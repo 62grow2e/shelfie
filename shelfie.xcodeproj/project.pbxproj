@@ -27,6 +27,8 @@
 		E3D777D81C3D70D400C64509 /* capture_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D777D41C3D70D400C64509 /* capture_layer.cpp */; };
 		E3D777D91C3D70D400C64509 /* movie_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D777D61C3D70D400C64509 /* movie_layer.cpp */; };
 		E3D777DC1C3D70E100C64509 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D777DA1C3D70E100C64509 /* ofApp.cpp */; };
+		E3D77A1D1C425A1800C64509 /* FastMatchTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D77A161C425A1800C64509 /* FastMatchTemplate.cpp */; };
+		E3D77A1E1C425A1800C64509 /* ofxTemplateMatching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D77A181C425A1800C64509 /* ofxTemplateMatching.cpp */; };
 		E3E98C161C3D570A00275BD6 /* detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3E98C141C3D570A00275BD6 /* detector.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
@@ -258,6 +260,10 @@
 		E3D777D71C3D70D400C64509 /* movie_layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = movie_layer.h; path = sources/movie_layer.h; sourceTree = SOURCE_ROOT; };
 		E3D777DA1C3D70E100C64509 /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofApp.cpp; path = sources/ofApp.cpp; sourceTree = SOURCE_ROOT; };
 		E3D777DB1C3D70E100C64509 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = sources/ofApp.h; sourceTree = SOURCE_ROOT; };
+		E3D77A161C425A1800C64509 /* FastMatchTemplate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FastMatchTemplate.cpp; sourceTree = "<group>"; };
+		E3D77A171C425A1800C64509 /* FastMatchTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastMatchTemplate.h; sourceTree = "<group>"; };
+		E3D77A181C425A1800C64509 /* ofxTemplateMatching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTemplateMatching.cpp; sourceTree = "<group>"; };
+		E3D77A191C425A1800C64509 /* ofxTemplateMatching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTemplateMatching.h; sourceTree = "<group>"; };
 		E3E98C141C3D570A00275BD6 /* detector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = detector.cpp; path = ../sources/detector.cpp; sourceTree = "<group>"; };
 		E3E98C151C3D570A00275BD6 /* detector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = detector.h; path = ../sources/detector.h; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../openFrameworks/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -677,6 +683,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				E3D77A031C425A1800C64509 /* ofxTemplateMatching */,
 				480A780D8D0308AE4A368801 /* ofxGui */,
 				A0B90D3B0ADB9C1716816714 /* ofxOpenCv */,
 				F5F1F1EF8441E64FD46F07C8 /* ofxSvg */,
@@ -796,6 +803,26 @@
 				48BC521D9D115455A98097D5 /* vec_distance_detail.hpp */,
 			);
 			name = detail;
+			sourceTree = "<group>";
+		};
+		E3D77A031C425A1800C64509 /* ofxTemplateMatching */ = {
+			isa = PBXGroup;
+			children = (
+				E3D77A151C425A1800C64509 /* src */,
+			);
+			name = ofxTemplateMatching;
+			path = ../../openFrameworks/addons/ofxTemplateMatching;
+			sourceTree = "<group>";
+		};
+		E3D77A151C425A1800C64509 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E3D77A161C425A1800C64509 /* FastMatchTemplate.cpp */,
+				E3D77A171C425A1800C64509 /* FastMatchTemplate.h */,
+				E3D77A181C425A1800C64509 /* ofxTemplateMatching.cpp */,
+				E3D77A191C425A1800C64509 /* ofxTemplateMatching.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		E3E98C0B1C3D528B00275BD6 /* view */ = {
@@ -1011,12 +1038,14 @@
 				24666B72118D905E6B13F3DE /* ofxCvHaarFinder.cpp in Sources */,
 				24E3AA0B7B56DE70544DBDD9 /* ofxCvImage.cpp in Sources */,
 				7F62C792C5597BE4DD66D166 /* ofxCvShortImage.cpp in Sources */,
+				E3D77A1D1C425A1800C64509 /* FastMatchTemplate.cpp in Sources */,
 				E3D777D81C3D70D400C64509 /* capture_layer.cpp in Sources */,
 				D15CCA67046FA01584AE3ADA /* ofxSvg.cpp in Sources */,
 				F288EB513A7F164B68CC8413 /* src_colors.cpp in Sources */,
 				0664B61252BE0B0DB41AC09E /* svgtiny.cpp in Sources */,
 				E8DDC92135ACB601DA9CC2A6 /* svgtiny_gradient.cpp in Sources */,
 				546E5C0D166218E197666FF7 /* svgtiny_list.cpp in Sources */,
+				E3D77A1E1C425A1800C64509 /* ofxTemplateMatching.cpp in Sources */,
 				55A142C15F556005B3294525 /* ofxVectorGraphics.cpp in Sources */,
 				E85DDEC0BBF52409947C6F47 /* CreEPS.cpp in Sources */,
 			);
