@@ -26,11 +26,17 @@ class Detector : public ofThread {
   // Accessors
   void setInput(ofImage& input);
 
+  // Status
+  bool running();
+
   // Routine
+  void threadedFunction();
   void run();
 
  private:
   // Properties
+  bool running_;
+
   // Data members
   ofImage input_;
   vector<ofImage> samples_;

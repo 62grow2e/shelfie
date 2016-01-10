@@ -8,8 +8,8 @@
 
 #include "detector.h"
 
-Detector::Detector() {
-  const boost::filesystem::path path("../../../../resources/sample_icons");
+Detector::Detector() : running_(false) {
+  const boost::filesystem::path path("../../../data/img/sample_icons");
   const auto directory_iterator = boost::filesystem::directory_iterator(path);
   for (auto itr = boost::filesystem::begin(directory_iterator);
       itr != boost::filesystem::end(directory_iterator); itr++) {
@@ -26,6 +26,12 @@ Detector::~Detector() {
 
 }
 
+void Detector::threadedFunction() {
+  while (isThreadRunning()) {
+    cout << "thread running" << endl;
+  }
+}
+
 #pragma mark Accessors
 void Detector::setInput(ofImage& input) {
   lock();
@@ -33,7 +39,16 @@ void Detector::setInput(ofImage& input) {
   unlock();
 }
 
+#pragma mark Status
+bool Detector::running() {
+  return running_;
+}
+
 #pragma mark Routine
 void Detector::run() {
-
+  running_ = true;
+  lock();
+  
+  unlock();
+  running_ = false;
 }

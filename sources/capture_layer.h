@@ -11,11 +11,13 @@
 
 #include <stdio.h>
 #include "ofMain.h"
+#include "ofxSvg.h"
 
 class CaptureLayer {
  public:
   // Constructor and destructor
-  CaptureLayer(int frame_width = ofGetWidth(), int frame_height = ofGetHeight());
+  CaptureLayer(int frame_width = ofGetWidth(),
+    int frame_height = ofGetHeight());
   ~CaptureLayer();
 
   // Disallow copy and assign
@@ -42,6 +44,11 @@ class CaptureLayer {
   // Data members
   ofVideoGrabber capture_;
   ofImage cropped_frame_;
+  ofxSVG crop_assistant_; // inner size: 650x650
+  vector<ofPolyline> crop_assistant_lines_;
+  const size_t original_inner_width_ = 650;
+  const size_t original_inner_height_ = 650;
+  ofVec2f crop_assistant_scale_;
 };
 
 #endif /* capture_layer_h */

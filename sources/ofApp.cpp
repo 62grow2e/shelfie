@@ -24,7 +24,12 @@ void ofApp::exit(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+  switch (key) {
+    case 'c':
+      auto& cropped_frame = capture_layer_->getCroppedFrame();
+      cout << "crop" << endl;
+      break;
+  }
 }
 
 //--------------------------------------------------------------
