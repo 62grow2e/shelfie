@@ -10,7 +10,7 @@
 
 CaptureLayer::CaptureLayer(int frame_width, int frame_height,
   int crop_width, int crop_height)
-  : frame_size_(frame_width, frame_height),
+  : match_id_(-1), frame_size_(frame_width, frame_height),
     cropped_frame_position_(390, 110),
     cropped_frame_size_(500, 500),
     original_inner_width_(crop_width), original_inner_height_(crop_height) {
@@ -68,7 +68,12 @@ void CaptureLayer::draw(int x, int y) {
 #pragma mark Image management
 void CaptureLayer::drawCropAssistant() {
   ofPushMatrix();
-  ofSetColor(255, 255, 255);
+  if (match_id_ != -1) {
+    ofSetHexColor(0x00ff00);
+  }
+  else {
+    ofSetHexColor(0xff0000);
+  }
   ofFill();
   ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
   ofScale(crop_assistant_scale_.x, crop_assistant_scale_.y);
@@ -81,6 +86,8 @@ void CaptureLayer::drawCropAssistant() {
     }
     ofEndShape();
   }
+  ofNoFill();
+  ofSetHexColor(0xffffff);
   ofPopMatrix();
 }
 

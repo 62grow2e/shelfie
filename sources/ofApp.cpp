@@ -5,10 +5,15 @@ ofApp::ofApp() : detector_(250, 250) {
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+  MatchTypeString.emplace(std::make_pair(0, "Tape"));
+  MatchTypeString.emplace(std::make_pair(1, "Scissors"));
+  MatchTypeString.emplace(std::make_pair(2, "HeatGun"));
+  MatchTypeString.emplace(std::make_pair(3, "Ruler"));
   crop_size_.set(500, 500);
 //  ofSetVerticalSync(false);
   capture_layer_ = make_unique<
     CaptureLayer>(ofGetWidth(), ofGetHeight(), crop_size_.x, crop_size_.y);
+  alert_layer_ = make_unique<AlertLayer>();
   detector_.startThread();
 }
 
@@ -18,6 +23,11 @@ void ofApp::update(){
   if (!detector_.isThreadRunning()) {
     auto& cropped_frame = capture_layer_->getCroppedFrame();
     detector_.start(cropped_frame);
+  }
+  capture_layer_->setMatchID(detector_.getMatchID());
+  alert_layer_->setMatchID(detector_.getMatchID());
+  if (detector_.getMatchID() != -1) {
+    alert_layer_->setShowText(true);
   }
 }
 

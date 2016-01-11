@@ -26,6 +26,7 @@ class CaptureLayer {
 
   // Accessors
   ofImage& getCroppedFrame();
+  void setMatchID(int& match_id) { match_id_ = match_id; };
 
   // Routine
   void update();
@@ -37,6 +38,7 @@ class CaptureLayer {
   void cropFrame();
 
   // Properties
+  int match_id_;
   ofVec2f frame_size_;
   ofVec2f cropped_frame_position_;
   ofVec2f cropped_frame_size_;

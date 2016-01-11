@@ -24,6 +24,7 @@ class Detector : public ofThread {
 
   // Accessors
   void setInput(ofImage& input);
+  int& getMatchID() { return match_id_; };
 
   // Status
   bool running();
@@ -44,12 +45,12 @@ class Detector : public ofThread {
   // Properties
   bool running_;
   bool detecting_;
+  int match_id_;
 
   // Data members
   ofxTemplateMatching matcher_;
   vector<MatchObject> samples_;
   vector<TemplateMatch> matches_;
-  vector<int> matches_id_;
   ofxCvColorImage color_image_;
   ofxCvGrayscaleImage gray_image_;
   ofImage input_;

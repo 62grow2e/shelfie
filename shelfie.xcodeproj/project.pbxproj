@@ -25,6 +25,7 @@
 		D15CCA67046FA01584AE3ADA /* ofxSvg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 319223BB19F679C01C318F66 /* ofxSvg.cpp */; };
 		DA517FABDA67F42EBD35AA8D /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D44350DD63C335DC5A865 /* ofxSlider.cpp */; };
 		E3C933111C42743000E8ABE7 /* detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C933101C42743000E8ABE7 /* detector.cpp */; };
+		E3C933161C43BAD500E8ABE7 /* alert_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C933141C43BAD500E8ABE7 /* alert_layer.cpp */; };
 		E3D777D81C3D70D400C64509 /* capture_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D777D41C3D70D400C64509 /* capture_layer.cpp */; };
 		E3D777D91C3D70D400C64509 /* movie_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D777D61C3D70D400C64509 /* movie_layer.cpp */; };
 		E3D777DC1C3D70E100C64509 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D777DA1C3D70E100C64509 /* ofApp.cpp */; };
@@ -255,6 +256,8 @@
 		E1EDD9A54004EE2EDBFE6BA2 /* ofxButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxButton.h; path = ../../openFrameworks/addons/ofxGui/src/ofxButton.h; sourceTree = SOURCE_ROOT; };
 		E27A01EC738A025C56156731 /* saturate_cast.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = saturate_cast.hpp; path = ../../openFrameworks/addons/ofxOpenCv/libs/opencv/include/opencv2/gpu/device/saturate_cast.hpp; sourceTree = SOURCE_ROOT; };
 		E3C933101C42743000E8ABE7 /* detector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = detector.cpp; path = sources/detector.cpp; sourceTree = SOURCE_ROOT; };
+		E3C933141C43BAD500E8ABE7 /* alert_layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = alert_layer.cpp; path = sources/alert_layer.cpp; sourceTree = SOURCE_ROOT; };
+		E3C933151C43BAD500E8ABE7 /* alert_layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = alert_layer.h; path = sources/alert_layer.h; sourceTree = SOURCE_ROOT; };
 		E3D777D41C3D70D400C64509 /* capture_layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = capture_layer.cpp; path = sources/capture_layer.cpp; sourceTree = SOURCE_ROOT; };
 		E3D777D51C3D70D400C64509 /* capture_layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = capture_layer.h; path = sources/capture_layer.h; sourceTree = SOURCE_ROOT; };
 		E3D777D61C3D70D400C64509 /* movie_layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = movie_layer.cpp; path = sources/movie_layer.cpp; sourceTree = SOURCE_ROOT; };
@@ -832,6 +835,8 @@
 				E3D777D51C3D70D400C64509 /* capture_layer.h */,
 				E3D777D61C3D70D400C64509 /* movie_layer.cpp */,
 				E3D777D71C3D70D400C64509 /* movie_layer.h */,
+				E3C933141C43BAD500E8ABE7 /* alert_layer.cpp */,
+				E3C933151C43BAD500E8ABE7 /* alert_layer.h */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -1043,6 +1048,7 @@
 				D15CCA67046FA01584AE3ADA /* ofxSvg.cpp in Sources */,
 				F288EB513A7F164B68CC8413 /* src_colors.cpp in Sources */,
 				0664B61252BE0B0DB41AC09E /* svgtiny.cpp in Sources */,
+				E3C933161C43BAD500E8ABE7 /* alert_layer.cpp in Sources */,
 				E8DDC92135ACB601DA9CC2A6 /* svgtiny_gradient.cpp in Sources */,
 				546E5C0D166218E197666FF7 /* svgtiny_list.cpp in Sources */,
 				E3D77A1E1C425A1800C64509 /* ofxTemplateMatching.cpp in Sources */,
