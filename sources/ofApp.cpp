@@ -1,33 +1,51 @@
 #include "ofApp.h"
 
+ofApp::ofApp() : detector_(250, 250) {
+}
+
 //--------------------------------------------------------------
 void ofApp::setup(){
+  crop_size_.set(650, 650);
 //  ofSetVerticalSync(false);
-  capture_layer_ = make_unique<CaptureLayer>();
+  capture_layer_ = make_unique<
+    CaptureLayer>(ofGetWidth(), ofGetHeight(), crop_size_.x, crop_size_.y);
+  detector_.startThread();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
   capture_layer_->update();
+  if (!detector_.isThreadRunning()) {
+    auto& cropped_frame = capture_layer_->getCroppedFrame();
+    detector_.start(cropped_frame);
+  }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
   capture_layer_->draw(0, 0);
+  detector_.draw();
 }
 
 //--------------------------------------------------------------
 void ofApp::exit(){
-  detector.stopThread();
+  detector_.stopThread();
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
   switch (key) {
     case 'c':
-      auto& cropped_frame = capture_layer_->getCroppedFrame();
-      detector.start(cropped_frame);
-      cout << "crop" << endl;
+//      if (!detector_.isThreadRunning()) {
+//        auto& cropped_frame = capture_layer_->getCroppedFrame();
+//        detector_.start(cropped_frame);
+//      }
+      break;
+    case OF_KEY_UP:
+      detector_.raiseThreshold();
+      break;
+    case OF_KEY_DOWN:
+      detector_.reduceThreshold();
       break;
   }
 }

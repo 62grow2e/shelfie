@@ -7,6 +7,7 @@
 class ofApp : public ofBaseApp{
   
 public:
+  ofApp();
   void setup();
   void update();
   void draw();
@@ -26,6 +27,7 @@ public:
   
  private:
   unique_ptr<CaptureLayer> capture_layer_;
-  Detector detector;
-  
+  Detector detector_;
+  // Properties
+  ofVec2f crop_size_;
 };

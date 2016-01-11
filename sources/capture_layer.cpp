@@ -8,10 +8,12 @@
 
 #include "capture_layer.h"
 
-CaptureLayer::CaptureLayer(int frame_width, int frame_height)
+CaptureLayer::CaptureLayer(int frame_width, int frame_height,
+  int crop_width, int crop_height)
   : frame_size_(frame_width, frame_height),
     cropped_frame_position_(frame_size_.x/3, frame_size_.x/3),
-    cropped_frame_size_(frame_size_.x/3, frame_size_.x/3) {
+    cropped_frame_size_(frame_size_.x/3, frame_size_.x/3),
+    original_inner_width_(crop_width), original_inner_height_(crop_height) {
   // Camera device
   auto capture_list = capture_.listDevices();
   for (auto itr = capture_list.begin(); itr != capture_list.end(); itr++) {
@@ -89,4 +91,5 @@ void CaptureLayer::cropFrame() {
   cropped_frame_ = capture_.getPixels();
   cropped_frame_.crop(cropped_frame_position_.x, cropped_frame_position_.y,
     cropped_frame_size_.x, cropped_frame_size_.y);
+  cropped_frame_.resize(250, 250);
 }

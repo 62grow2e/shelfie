@@ -16,8 +16,8 @@
 class CaptureLayer {
  public:
   // Constructor and destructor
-  CaptureLayer(int frame_width = ofGetWidth(),
-    int frame_height = ofGetHeight());
+  CaptureLayer(int frame_width = ofGetWidth(),int frame_height = ofGetHeight(),
+    int crop_width = 650, int crop_height = 650);
   ~CaptureLayer();
 
   // Disallow copy and assign
@@ -46,8 +46,8 @@ class CaptureLayer {
   ofImage cropped_frame_;
   ofxSVG crop_assistant_; // inner size: 650x650
   vector<ofPolyline> crop_assistant_lines_;
-  const size_t original_inner_width_ = 650;
-  const size_t original_inner_height_ = 650;
+  size_t original_inner_width_;
+  size_t original_inner_height_;
   ofVec2f crop_assistant_scale_;
 };
 

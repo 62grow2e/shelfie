@@ -8,15 +8,14 @@
 
 #pragma once
 
-
-//#include "ofMain.h"
 #include "ofThread.h"
 #include "ofxOpenCv.h"
+#include "ofxTemplateMatching.h"
 
 class Detector : public ofThread {
  public:
   // Constructor and destructor
-  Detector();
+  Detector(int crop_width = 650, int crop_height = 650);
   ~Detector();
 
   // Disallow copy and assign
@@ -29,10 +28,13 @@ class Detector : public ofThread {
   // Status
   bool running();
   bool detecting();
+  void raiseThreshold(int diff = 1);
+  void reduceThreshold(int diff = 1);
 
   // Routine
   void start(ofImage& input);
   void threadedFunction();
+  void draw();
 
 
  private:
@@ -41,6 +43,13 @@ class Detector : public ofThread {
   bool detecting_;
 
   // Data members
+  ofxTemplateMatching matcher_;
+  vector<MatchObject> samples_;
+  vector<TemplateMatch> matches_;
+  ofxCvColorImage color_image_;
+  ofxCvGrayscaleImage gray_image_;
   ofImage input_;
-  vector<ofImage> samples_;
+  vector<ofImage> samples_origin_;
+  size_t num_found_;
+  size_t threshold_;
 };

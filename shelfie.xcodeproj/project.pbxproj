@@ -24,12 +24,12 @@
 		D14112331A0BCEF6A1B28D26 /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9CB99A8F4FFD8917412B611 /* ofxButton.cpp */; };
 		D15CCA67046FA01584AE3ADA /* ofxSvg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 319223BB19F679C01C318F66 /* ofxSvg.cpp */; };
 		DA517FABDA67F42EBD35AA8D /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 839D44350DD63C335DC5A865 /* ofxSlider.cpp */; };
+		E3C933111C42743000E8ABE7 /* detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3C933101C42743000E8ABE7 /* detector.cpp */; };
 		E3D777D81C3D70D400C64509 /* capture_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D777D41C3D70D400C64509 /* capture_layer.cpp */; };
 		E3D777D91C3D70D400C64509 /* movie_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D777D61C3D70D400C64509 /* movie_layer.cpp */; };
 		E3D777DC1C3D70E100C64509 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D777DA1C3D70E100C64509 /* ofApp.cpp */; };
 		E3D77A1D1C425A1800C64509 /* FastMatchTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D77A161C425A1800C64509 /* FastMatchTemplate.cpp */; };
 		E3D77A1E1C425A1800C64509 /* ofxTemplateMatching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D77A181C425A1800C64509 /* ofxTemplateMatching.cpp */; };
-		E3E98C161C3D570A00275BD6 /* detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3E98C141C3D570A00275BD6 /* detector.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E85DDEC0BBF52409947C6F47 /* CreEPS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A14FAF7D7CEFEF5C2B2B137 /* CreEPS.cpp */; };
@@ -254,6 +254,7 @@
 		E198CCB4FE7554FD9486312C /* ofxCvGrayscaleImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxCvGrayscaleImage.h; path = ../../openFrameworks/addons/ofxOpenCv/src/ofxCvGrayscaleImage.h; sourceTree = SOURCE_ROOT; };
 		E1EDD9A54004EE2EDBFE6BA2 /* ofxButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxButton.h; path = ../../openFrameworks/addons/ofxGui/src/ofxButton.h; sourceTree = SOURCE_ROOT; };
 		E27A01EC738A025C56156731 /* saturate_cast.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = saturate_cast.hpp; path = ../../openFrameworks/addons/ofxOpenCv/libs/opencv/include/opencv2/gpu/device/saturate_cast.hpp; sourceTree = SOURCE_ROOT; };
+		E3C933101C42743000E8ABE7 /* detector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = detector.cpp; path = sources/detector.cpp; sourceTree = SOURCE_ROOT; };
 		E3D777D41C3D70D400C64509 /* capture_layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = capture_layer.cpp; path = sources/capture_layer.cpp; sourceTree = SOURCE_ROOT; };
 		E3D777D51C3D70D400C64509 /* capture_layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = capture_layer.h; path = sources/capture_layer.h; sourceTree = SOURCE_ROOT; };
 		E3D777D61C3D70D400C64509 /* movie_layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = movie_layer.cpp; path = sources/movie_layer.cpp; sourceTree = SOURCE_ROOT; };
@@ -264,8 +265,7 @@
 		E3D77A171C425A1800C64509 /* FastMatchTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastMatchTemplate.h; sourceTree = "<group>"; };
 		E3D77A181C425A1800C64509 /* ofxTemplateMatching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTemplateMatching.cpp; sourceTree = "<group>"; };
 		E3D77A191C425A1800C64509 /* ofxTemplateMatching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTemplateMatching.h; sourceTree = "<group>"; };
-		E3E98C141C3D570A00275BD6 /* detector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = detector.cpp; path = ../sources/detector.cpp; sourceTree = "<group>"; };
-		E3E98C151C3D570A00275BD6 /* detector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = detector.h; path = ../sources/detector.h; sourceTree = "<group>"; };
+		E3E98C151C3D570A00275BD6 /* detector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = detector.h; path = sources/detector.h; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../openFrameworks/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4708EACD79C84447A798098 /* ofxGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGui.h; path = ../../openFrameworks/addons/ofxGui/src/ofxGui.h; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* shelfieDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shelfieDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -848,7 +848,7 @@
 		E3E98C0D1C3D52B000275BD6 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				E3E98C141C3D570A00275BD6 /* detector.cpp */,
+				E3C933101C42743000E8ABE7 /* detector.cpp */,
 				E3E98C151C3D570A00275BD6 /* detector.h */,
 			);
 			name = model;
@@ -1022,7 +1022,6 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				1D54A3D1C2CCEACF3844B3EC /* ofxBaseGui.cpp in Sources */,
 				D14112331A0BCEF6A1B28D26 /* ofxButton.cpp in Sources */,
-				E3E98C161C3D570A00275BD6 /* detector.cpp in Sources */,
 				E3D777D91C3D70D400C64509 /* movie_layer.cpp in Sources */,
 				78DCCE01CA1ECC0F810A1857 /* ofxGuiGroup.cpp in Sources */,
 				B6BF15D1BE7D008A045F1C22 /* ofxLabel.cpp in Sources */,
@@ -1039,6 +1038,7 @@
 				24E3AA0B7B56DE70544DBDD9 /* ofxCvImage.cpp in Sources */,
 				7F62C792C5597BE4DD66D166 /* ofxCvShortImage.cpp in Sources */,
 				E3D77A1D1C425A1800C64509 /* FastMatchTemplate.cpp in Sources */,
+				E3C933111C42743000E8ABE7 /* detector.cpp in Sources */,
 				E3D777D81C3D70D400C64509 /* capture_layer.cpp in Sources */,
 				D15CCA67046FA01584AE3ADA /* ofxSvg.cpp in Sources */,
 				F288EB513A7F164B68CC8413 /* src_colors.cpp in Sources */,
