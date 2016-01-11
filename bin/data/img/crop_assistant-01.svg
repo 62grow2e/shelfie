@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="560" viewBox="0 0 560 560">
+  <title>crop_assistant</title>
+  <path d="M0,89.77V0H90V30H30V89.77H0Z" style="stroke: #000;stroke-miterlimit: 10"/>
+  <path d="M470,0h89.77V90h-30V30H470V0Z" style="stroke: #000;stroke-miterlimit: 10"/>
+  <path d="M560,470v89.77H470v-30h60V470h30Z" style="stroke: #000;stroke-miterlimit: 10"/>
+  <path d="M89.77,560H0V470H30v60H89.77v30Z" style="stroke: #000;stroke-miterlimit: 10"/>
+</svg>

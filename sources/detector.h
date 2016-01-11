@@ -30,9 +30,12 @@ class Detector : public ofThread {
   bool detecting();
   void raiseThreshold(int diff = 1);
   void reduceThreshold(int diff = 1);
+  void raiseBlackWhiteLevel(int diff = 1);
+  void reduceBlackWhiteLevel(int diff = 1);
 
   // Routine
   void start(ofImage& input);
+  void stop();
   void threadedFunction();
   void draw();
 
@@ -46,10 +49,12 @@ class Detector : public ofThread {
   ofxTemplateMatching matcher_;
   vector<MatchObject> samples_;
   vector<TemplateMatch> matches_;
+  vector<int> matches_id_;
   ofxCvColorImage color_image_;
   ofxCvGrayscaleImage gray_image_;
   ofImage input_;
   vector<ofImage> samples_origin_;
   size_t num_found_;
   size_t threshold_;
+  size_t black_white_level_;
 };

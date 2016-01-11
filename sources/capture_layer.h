@@ -17,7 +17,7 @@ class CaptureLayer {
  public:
   // Constructor and destructor
   CaptureLayer(int frame_width = ofGetWidth(),int frame_height = ofGetHeight(),
-    int crop_width = 650, int crop_height = 650);
+    int crop_width = 500, int crop_height = 500);
   ~CaptureLayer();
 
   // Disallow copy and assign

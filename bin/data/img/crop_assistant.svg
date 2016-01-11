@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="810" height="810" viewBox="0 0 810 810">
-  <title>crop_assistant</title>
-  <path d="M229.5,0.5V80.15H80.15V229.5H0.5V0.5h229Z" style="stroke: #000"/>
-  <path d="M809.5,229.5H729.85V80.15H580.5V0.5h229v229Z" style="stroke: #000"/>
-  <path d="M580.5,809.5V729.85H729.85V580.5H809.5v229h-229Z" style="stroke: #000"/>
-  <path d="M0.5,580.5H80.15V729.84H229.5V809.5H0.5v-229Z" style="stroke: #000"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 560 560" xml:space="preserve">
+<path d="M0,89.8V0h90l0,30H30v59.8L0,89.8z"/>
+<path d="M470,0l89.8,0v90l-30,0V30H470L470,0z"/>
+<path d="M560,470v89.8h-90l0-30h60V470L560,470z"/>
+<path d="M89.8,560H0l0-90l30,0v60h59.8L89.8,560z"/>
 </svg>

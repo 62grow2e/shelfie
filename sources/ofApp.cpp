@@ -5,7 +5,7 @@ ofApp::ofApp() : detector_(250, 250) {
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-  crop_size_.set(650, 650);
+  crop_size_.set(500, 500);
 //  ofSetVerticalSync(false);
   capture_layer_ = make_unique<
     CaptureLayer>(ofGetWidth(), ofGetHeight(), crop_size_.x, crop_size_.y);
@@ -29,7 +29,7 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::exit(){
-  detector_.stopThread();
+  detector_.stop();
 }
 
 //--------------------------------------------------------------
@@ -46,6 +46,12 @@ void ofApp::keyPressed(int key){
       break;
     case OF_KEY_DOWN:
       detector_.reduceThreshold();
+      break;
+    case OF_KEY_RIGHT:
+      detector_.raiseBlackWhiteLevel();
+      break;
+    case OF_KEY_LEFT:
+      detector_.reduceBlackWhiteLevel();
       break;
   }
 }
