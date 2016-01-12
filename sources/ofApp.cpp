@@ -10,6 +10,7 @@ void ofApp::setup() {
   capture_layer_ = make_unique<
     CaptureLayer>(ofGetWidth(), ofGetHeight(), crop_size_.x, crop_size_.y);
   alert_layer_ = make_unique<AlertLayer>();
+  movie_layer_ = make_unique<MovieLayer>();
   detector_.startThread();
 }
 
@@ -28,14 +29,16 @@ void ofApp::update() {
   else {
     alert_layer_->setShowText(false);
   }
+  movie_layer_->update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
   capture_layer_->draw(0, 0);
   
-  detector_.draw();
+//  detector_.draw();
   alert_layer_->draw();
+  movie_layer_->draw();
 }
 
 //--------------------------------------------------------------
@@ -47,6 +50,9 @@ void ofApp::exit() {
 void ofApp::keyPressed(int key) {
   switch (key) {
     case 'c':
+      break;
+    case 'q':
+      movie_layer_->finishVideo();
       break;
     case OF_KEY_UP:
       detector_.raiseThreshold();
@@ -61,6 +67,10 @@ void ofApp::keyPressed(int key) {
       detector_.reduceBlackWhiteLevel();
       break;
     case ' ':
+      if (detector_.getMatchID() == -1) {}
+      else {
+        movie_layer_->toggleVideo(detector_.getMatchID());
+      }
       break;
   }
 }

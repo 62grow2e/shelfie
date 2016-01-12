@@ -36,5 +36,6 @@ public:
   // Data members
   unique_ptr<CaptureLayer> capture_layer_;
   unique_ptr<AlertLayer> alert_layer_;
+  unique_ptr<MovieLayer> movie_layer_;
   Detector detector_;
 };

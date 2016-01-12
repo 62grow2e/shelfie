@@ -28,17 +28,19 @@ class MovieLayer {
   // Routine
   void update();
   void draw();
-  void startVideo();
+  void toggleVideo(int match_id_ = 0);
+  void startVideo(int match_id_ = 0);
   void finishVideo();
 
  private:
   // Player
   // Properties
+  int match_id_;
   bool video_start_;
   bool playing_;
   bool preparing_;
   // Data members
-  vector<ofVideoPlayer> videos_;
+  vector<ofVideoPlayer*> videos_;
 };
 
 #endif /* movie_layer_h */
