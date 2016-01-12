@@ -70,9 +70,6 @@ void Detector::threadedFunction() {
 
 void Detector::draw() {
   lock();
-  if (match_id_ == 1) {
-      samples_origin_.at(match_id_).draw(200, ofGetHeight()-200);
-  }
   gray_image_.draw(0, 0);
   unlock();
 }

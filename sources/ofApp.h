@@ -2,21 +2,15 @@
 
 #include "ofMain.h"
 #include "capture_layer.h"
+#include "movie_layer.h"
 #include "alert_layer.h"
 #include "detector.h"
+
 
 class ofApp : public ofBaseApp{
   
 public:
-  // Shered data definitions
-  static enum MatchType {
-    TAPE = 0,
-    SCISSORS = 1,
-    HEATGUN = 2,
-    RULER = 3
-  };
-  static std::unordered_map<int, std::string> MatchTypeString;
-
+  
   // Basic methods
   ofApp();
   void setup();
@@ -37,9 +31,10 @@ public:
   void gotMessage(ofMessage msg);
   
  private:
+  // Properties
+  ofVec2f crop_size_;
+  // Data members
   unique_ptr<CaptureLayer> capture_layer_;
   unique_ptr<AlertLayer> alert_layer_;
   Detector detector_;
-  // Properties
-  ofVec2f crop_size_;
 };

@@ -46,7 +46,7 @@ class CaptureLayer {
   // Data members
   ofVideoGrabber capture_;
   ofImage cropped_frame_;
-  ofxSVG crop_assistant_; // inner size: 650x650
+  ofxSVG crop_assistant_; // inner size: 500x500
   vector<ofPolyline> crop_assistant_lines_;
   size_t original_inner_width_;
   size_t original_inner_height_;

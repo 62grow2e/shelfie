@@ -22,12 +22,23 @@ class MovieLayer {
   MovieLayer(const MovieLayer&) = delete;
   MovieLayer& operator=(MovieLayer&) = delete;
 
+  // Accessor
+  bool playing() { return playing_; }
+
   // Routine
+  void update();
+  void draw();
+  void startVideo();
+  void finishVideo();
 
  private:
   // Player
   // Properties
+  bool video_start_;
+  bool playing_;
+  bool preparing_;
   // Data members
+  vector<ofVideoPlayer> videos_;
 };
 
 #endif /* movie_layer_h */

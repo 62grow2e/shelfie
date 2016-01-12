@@ -1,6 +1,17 @@
 #include "ofMain.h"
 #include "ofApp.h"
 
+namespace match_type {
+enum ID {
+  TAPE = 0,
+  SCISSORS = 1,
+  HEATGUN = 2,
+  RULER = 3
+};
+vector<string>Names = {
+  "Tape", "Scissors", "HeatGun", "Ruler"
+};
+} // namespace match_type
 //========================================================================
 int main( ){
  ofSetupOpenGL(1280,720,OF_WINDOW);   // <-------- setup the GL context

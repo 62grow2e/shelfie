@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.96mm" height="30.86mm" viewBox="0 0 73.58 87.49">
+  <title>tool_icons</title>
+  <g>
+    <path d="M18.66,51.75l-3.55,4.37a1.82,1.82,0,0,0,.26,2.55L18.2,61,24,53.77l-2.82-2.29A1.81,1.81,0,0,0,18.66,51.75Z" style="fill: #fff;stroke: #fff;stroke-miterlimit: 10"/>
+    <polygon points="0 28.11 11.27 34.44 31.34 9.74 22.83 0 0 28.11" style="fill: #fff;stroke: #fff;stroke-miterlimit: 10"/>
+    <path d="M73.46,45.37a19.31,19.31,0,0,0-2.53-7.58L46.85,67.44A19.27,19.27,0,0,0,68,61.31l1.3-1.6A19.3,19.3,0,0,0,73.46,45.37Z" style="fill: #fff;stroke: #fff;stroke-miterlimit: 10"/>
+    <path d="M34.54,12L14.16,37.11l15,15.26-17.85,22A8.06,8.06,0,1,0,23.86,84.51L40.58,63.92a19.24,19.24,0,0,0,2.21,1.6L68.23,34.21a19.57,19.57,0,0,0-2.06-1.87Z" style="fill: #fff;stroke: #fff;stroke-miterlimit: 10"/>
+  </g>
+</svg>

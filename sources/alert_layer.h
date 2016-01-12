@@ -10,7 +10,7 @@
 #define alert_layer_h
 
 #include <ofMain.h>
-#include "ofApp.h"
+#include "ofxSvg.h"
 
 class AlertLayer {
  public:
@@ -29,12 +29,14 @@ class AlertLayer {
   // Routine
   void update();
   void draw();
+
  private:
   // Properties
   int match_id_;
   bool show_text_;
   // Data members
   ofTrueTypeFont font_;
+  vector<ofxSVG> tools_;
 };
 
 #endif /* alert_layer_h */
