@@ -20,8 +20,8 @@ CaptureLayer::CaptureLayer(int frame_width, int frame_height,
     cout << itr->id << ": " << itr->deviceName << endl;
   }
   cout << "Enter the number key to activate camera." << endl;
-  int input_number;
-  cin >> input_number;
+  int input_number = 0;
+//  cin >> input_number;
   if (input_number >= capture_list.size()) {
     ofLogError("WARNING", "No such a camera exist.");
     exit(EXIT_FAILURE);
